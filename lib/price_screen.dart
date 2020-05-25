@@ -24,50 +24,149 @@ crossAxisAlignment: CrossAxisAlignment.stretch,
                       icon:FaIcon(FontAwesomeIcons.cuttlefish,  size: 100),
                     ),
                   ),
+          Container(
+            padding: EdgeInsets.fromLTRB(10, 30, 10, 10),
+            height: 130.0,
+            width: double.maxFinite,
+            child: Column(
+              children: <Widget>[
+                Card(
+                  elevation: 5,
+                  child: Padding(
+                    padding: EdgeInsets.all(7),
+                    child: Stack(children: <Widget>[
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Stack(
+                            children: <Widget>[
+                              Padding(
+                                  padding: const EdgeInsets.only(left: 10, top: 5),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: <Widget>[
+                                  Padding(
+                                  padding: const EdgeInsets.only(left: 15.0),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Icon(
+                              FontAwesomeIcons.bitcoin,
+                              size:50.0
 
-//                  Card(
-//                    child: Column(
-//                      mainAxisSize: MainAxisSize.min,
-//                      children: <Widget>[
-//                        const ListTile(
-//                          leading: Icon(Icons.album),
-//                          title: Text('The Enchanted Nightingale'),
-//                          subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-//                        ),
-//                        ButtonBar(
-//                          children: <Widget>[
-//                            FlatButton(
-//                              child: const Text('BUY TICKETS'),
-//                              onPressed: () { /* ... */ },
-//                            ),
-//                            FlatButton(
-//                              child: const Text('LISTEN'),
-//                              onPressed: () { /* ... */ },
-//                            ),
-//                          ],
-//                        ),
-//
-//                      ],
-//                    ),
-//
-//
-//                  ),
-                Container(
-                  height: 150.0,
-                  alignment: Alignment.center,
-                  padding: EdgeInsets.only(top: 30.0),
-                  color: Colors.purple,
-                  child: DropdownButton<String>(
-                      value: 'usd',
-                      items:[
+                          )),
+                    ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                        text: TextSpan(
+                          text: "Bitcoin",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: "\nBTC",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold)),
+                          ],
+                        ),
+                      ),
+                    ),
+                                          Spacer(),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                        text: TextSpan(
+                          text: "Bitcoin",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: "\nBTC",
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold)),
+                          ],
+                        ),
+                      ),
+                    ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
 
-                    DropdownMenuItem(child: Text('usd'), value:'usd'),
-                    DropdownMenuItem(child: Text('pen'), value:'pen'),
-                    DropdownMenuItem(child: Text('jdj'), value:'jdj'),
-                    DropdownMenuItem(child: Text('mjdj'), value:'mjdj')], onChanged: (value){print(value);
-                  }),
-                )
-                ]))
-    );
+                                        ],
+                                      ),
+
+                                    ],
+                                  ))
+                                            ]
+                                                ),
+                                    )
+                                              ],
+                                            ),
+                              ),),
+              ],
+            )
+                                ),]),),);
+
   }
+}
+
+Widget cryptoIcon() {
+  return Padding(
+    padding: const EdgeInsets.only(left: 15.0),
+    child: Align(
+        alignment: Alignment.centerLeft,
+        child: Icon(
+            FontAwesomeIcons.bitcoin,
+          size:50.0
+
+        )),
+  );
+}
+Widget cryptoNameSymbol() {
+  return Align(
+    alignment: Alignment.centerLeft,
+    child: RichText(
+      text: TextSpan(
+        text: "Bitcoin",
+        style: TextStyle(
+            fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
+        children: <TextSpan>[
+          TextSpan(
+              text: "\nBTC",
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold)),
+        ],
+      ),
+    ),
+  );
+}Widget cryptoChange() {
+  return Align(
+    alignment: Alignment.topRight,
+    child: RichText(
+      text: TextSpan(
+        text: '\n+202.835',
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            fontSize: 18),
+        children: <TextSpan>[
+          TextSpan(
+              text: '+3.67%',
+              style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold)),
+        ],
+      ),
+    ),
+  );
 }
